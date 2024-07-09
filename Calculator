@@ -1,0 +1,41 @@
+# Simple Calculator
+
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Error! Division by zero not possible."
+
+# Prompt user to input two numbers
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+
+# Prompt user to choose an operation
+print("Select operation:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+
+choice_ = input("Enter choice (1/2/3/4): ")
+
+# Perform the calculation and display the result
+if choice_ == '1':
+    print(f"{num1} + {num2} = {add(num1, num2)}")
+elif choice_ == '2':
+    print(f"{num1} - {num2} = {subtract(num1, num2)}")
+elif choice_ == '3':
+    print(f"{num1} * {num2} = {multiply(num1, num2)}")
+elif choice_ == '4':
+    print(f"{num1} / {num2} = {divide(num1, num2)}")
+else:
+    printf("Invalid Input")
